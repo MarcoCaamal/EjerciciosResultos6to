@@ -153,4 +153,19 @@ bool isNoble(int atomicNumber) {
   return _nobleGases[atomicNumber] != null;
 }
 
+//Párametros opcionales
+void enableFlags({bool? bold, bool? hidden}) {}
 
+// Parametros opcionales de posición
+String say(String from, String msg, [String? device]) {
+  var result = '$from says $msg';
+  if (device != null) {
+    result = "$result with a $device";
+  }
+  return result;
+}
+
+// Valores por defecto de los parametros
+enableFlags2({bool bold = false, bool hidden = false}) {
+  
+}
