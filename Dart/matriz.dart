@@ -18,9 +18,13 @@ var matriz = [
   [6, 2, 3, 12]
 ];
 
+/**
+ * Programa que calcula la suma de la diagonal de una matriz
+ */
 void calcularDiagonal() {
   var suma = 0;
 
+  // Ojo se puede hacer con un solo ciclo for haciendo matriz[i][i]
   for (var i = 0; i < matriz.length; i++) {
     for (var j = 0; j < matriz.length; j++) {
       if (i == j) {
@@ -32,6 +36,9 @@ void calcularDiagonal() {
   print(suma);
 }
 
+/**
+ * Programa que calcula la diagonal inversa de una diagonal
+ */
 void calcularDiagonalInversa() {
   var temp = matriz.length - 1;
   var suma = 0;

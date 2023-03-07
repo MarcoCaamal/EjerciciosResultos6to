@@ -11,9 +11,9 @@ var matrizA = [
 ];
 
 var matrizDiagonales = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
+  [1, 4, 7],
+  [2, 5, 8],
+  [3, 6, 9]
 ];
 
 void main(List<String> args) {
@@ -21,6 +21,9 @@ void main(List<String> args) {
   calcularDiagonalesMatriz();
 }
 
+/**
+ * Programa que calculoa una matriz traspuesta(cambia columnas por filas )
+ */
 void matrizTraspuesta() {
   List<List<int>> nuevaMatriz = [[], [], [], []];
   for (var i = 0; i < matrizA.length; i++) {
@@ -44,7 +47,7 @@ void matrizTraspuesta() {
 
 void calcularDiagonalesMatriz() {
   // Diagonal positiva
-  var suma = 0;
+  var sumaDiagonalPositiva = 0;
   List<List<int>> matrizCalculos = matrizDiagonales;
   var finalMatriz = matrizCalculos.length - 1;
   var nuevoFinalMatriz = finalMatriz + finalMatriz;
@@ -54,12 +57,20 @@ void calcularDiagonalesMatriz() {
     iterador++;
   }
 
-  matrizCalculos.forEach((element) {
-    print(element);
-  });
-
   iterador = 0;
   for (var i = 0; i < matrizCalculos.length - 2; i++) {
-    
+    int acomulador = 1;
+    for (var j = i; j < matrizCalculos.length - 2 + i; j++) {
+      // int valor1 = matrizCalculos[j][iterador];
+      // int valor2 = matrizCalculos[j + 1][iterador + 1];
+      // sumaDiagonalPositiva += valor1 * valor2;
+      // print(sumaDiagonalPositiva);
+      acomulador *= matrizCalculos[j][iterador];
+      iterador++;
+    }
+    sumaDiagonalPositiva += acomulador;
+    iterador = 0;
   }
+
+  
 }

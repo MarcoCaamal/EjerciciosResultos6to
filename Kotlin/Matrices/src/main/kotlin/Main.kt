@@ -1,5 +1,18 @@
-var matrizA = arrayOf(arrayOf(5,2,4), arrayOf(2,1,1), arrayOf(1,2,3))
-var matrizB = arrayOf(arrayOf(1,0,2), arrayOf(4,3,1), arrayOf(2,0,3))
+/**
+ * @author Marco Caamal
+ * Programa que mutiplica dos arrays
+ */
+
+var matrizA = arrayOf(
+    arrayOf(5,2,4),
+    arrayOf(2,1,1),
+    arrayOf(1,2,3)
+)
+var matrizB = arrayOf(
+    arrayOf(1,0,2),
+    arrayOf(4,3,1),
+    arrayOf(2,0,3)
+)
 var matrizResultado = Array<Array<Int>>(3) { _ -> Array<Int>(3) { _ -> 0 } }
 fun main(args: Array<String>) {
     var jMatrizA = 0
